@@ -23,7 +23,7 @@ export default function Products(props) {
             onClose={() => setShow(false)}
             dismissible
           >
-            <p className="mb-0">{data?.msg}</p>
+            <p className="mb-0" data-testid="show-alert">{data?.msg}</p>
           </Alert>
         </Col>
       ) : (
@@ -32,7 +32,7 @@ export default function Products(props) {
           {data?.products?.length > 0 && (
             <Row>
               {data.products.map((product, index) => (
-                <Col sm={6} md={6} lg={4} key={index} className="mb-4">
+                <Col sm={6} md={6} lg={4} key={index} className="mb-4" data-testid="product-item">
                   <Product product={product} />
                 </Col>
               ))}

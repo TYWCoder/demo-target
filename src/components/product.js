@@ -45,6 +45,7 @@ export default function Product(props) {
             <Card.Body>
               <Card.Title>
                 <div
+                  data-testid={product.tcin}
                   dangerouslySetInnerHTML={{
                     __html: product.item.product_description.title,
                   }}
