@@ -5,7 +5,7 @@ Live demo: [https://resplendent-baklava-fbce63.netlify.app/](https://resplendent
 
 ## Configure environment
 
-Add enviroment values in your `.env.local` file.
+Add an enviroment variable in your `.env.local` file.
 
 ```bash
 TARGET_SEARCH_URL=https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&count=9&offset=0&pricing_store_id=3217&store_id=3217&visitor_id=01895496F88D020192DC36F940A1659B 
