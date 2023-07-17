@@ -3,34 +3,17 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 
 
 const SearchBar = (props) => {
-  const { loading, setLoading, setResult } = props;
+  const { loading, handleSubmit } = props;
   const [keyword, setKeyword] = useState('');
   
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    const fetchProducts = async () => {
-      const data = {
-        keyword: keyword,
-      };
-
-      const response = await fetch("/api/search", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
-      return response.json();
-    };
-
-    fetchProducts().then((data) => {
-      setResult(data);
-      setLoading(false);
-    });
+    handleSubmit(keyword);
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={onSubmit}>
       <Row>
         <Col sm="6" xs="9">
           <Form.Control
